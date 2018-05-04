@@ -1,0 +1,75 @@
+public class Customer {
+	
+	private String name;
+	private String id;
+	
+	public Customer(String n) {
+		name = n; //may need to set id too, not decided yet
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String toString() {
+		return "BOO!"+name;  // May change to give id too, depends on later decision
+	}
+
+}
+
+
+import java.util.HashMap;
+
+
+public class PremiumCustomer extends Customer{
+private Map<String,String> freeGifts = new HashMap();
+
+public PC (String a, Map<String,String> b ){
+super(a);
+freeGifts.putAll(b);
+}
+
+
+
+public void giftsForm (String c,int d ){
+
+if(freeGift.contains(c)){
+System.out.print(freeGifts.get(c) + "x" + d);}
+else{
+}
+
+}
+}
+
+
+
+
+
+public String toString(){
+String text="";
+for(String d : freeGifts.keySet()){
+text += d + "on ordering" + freeGifts.get(d)+"\n" ;}
+return super.toString +"\n"
++ "freeGifts \n"+ text;
+
+}
+
+
+
+
+
+
+public int cG(){
+int i =0;
+for (String e: fG.keySet()){
+if(e equals(chocolate)){
+i++}
+return i ;
+
+}
+
+
+
+}
+
+
