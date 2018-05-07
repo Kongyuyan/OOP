@@ -1,0 +1,75 @@
+import java.util.Arrays;
+import java.util.ArrayList;
+public class Divergence{
+ 
+  ArrayList<Integer> freq = new ArrayList();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
+  Integer fre =0;
+  public static int[] charCount(String s ){
+    if(s.isempty()){
+      return null;
+  
+  }
+    else{
+      char[] ss = s.tocharArray();
+      Arrays.sort(ss);
+      for(int a =0; a<ss.length();a++){
+        if(ss[a]==ss[a+1]){
+          fre ++;}
+      freq.add(fre);}
+     int[] freqs = new int[freq.size()] ;
+    for(int b =0; b<freq.size();b++){
+      freqs[b]=freq.get[b].intValue();}
+    return freqs;
+  }
+  }
+  
+  public static double[] normalise(int[] c){
+    double[] p= new double[c.length()];
+    double sum = 0;
+    for(int d :c){
+      sum+=c;}
+    if(c==null||c.length()==0){
+      return null;
+    }
+    else{
+      for(int d=0;d<c.length();d++){
+        p[d]=c[d]/sum;
+      
+      
+      }}
+    return p;}
+  
+  
+  
+  
+  public static double kld(double[] p, double[] q){
+    double kld;
+    for(int v=0; v<p.length();v++){
+      kld= p[v]*Math.log(p[v]/q[v]);
+      kld+=kld;}
+    return kld;}
+  
+  
+  
+  public static int[][] charCountArray(String a[]){
+    int[][] count = new int[a.size()][];
+    for(int r =0;r<a.size();r++){
+      for(String f:a){
+        count[r]= charCount(f);}}
+    return count;}
+  
+  
+  public static void main(String args){
+    String one = args[0];
+    String two = args[1];
+    Sreing j = new String[]{one,two};
+ System.out.print("Counting" + one + ":" +  Arrays.toString(charCount(one))+"\n"+
+  "Symbol probabilities in"+ one +":" + Arrays.toString(normalise(charCount(one)))+"\n"+
+   "Symbol probabilities in"+ two +":" + Arrays.toString(normalise(charCount(two)))+"\n"+
+   "Shared Symbol Count :"+ Arrays.toString(charCountArray(j))+"\n"+
+    "Divergence PQ :" + Arrays.toString(kld(normalise(charCount(one)), normalise(charCount(two))))+"\n");}}
+ 
+ 
+    
+    
